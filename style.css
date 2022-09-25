@@ -11,7 +11,7 @@
     --font-body : 'Indie Flower', cursive;
     --font-title : 'Pacifico', cursive;
 
-    --primary-color : rgb(252, 200, 194);
+    --primary-color : rgb(255, 223, 196);
     --secondary-color : rgb(250, 238, 141);
     --dark-color: #333;
 
@@ -101,6 +101,32 @@ input{
 
 input:focus{
     outline-color: var(--primary-color);
+}
+input:invalid{
+    outline-color: red;
+    border: 2px solid rgb(254, 93, 93);
+    animation: 300ms nope;
+}
+@keyframes nope {
+    0%{
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(-20%);
+    }
+    40%{
+        transform: translateX(20%);
+    }
+    60%{
+        transform: translateX(-20%);
+    }
+    80%{
+        transform: translateX(20%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+
 }
 
 button{
