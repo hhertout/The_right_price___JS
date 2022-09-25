@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Price is Right</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <script src="https://kit.fontawesome.com/17f51a975e.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+      <header class="header">
+          <h1>Welcome to "Guess The Wild Number" !</h1>
+      </header>
+
+    <section class="game">
+      <div class="rules" id="rules">
+        <p>Rules: This game is simple ! First, choose a number between 1 & 100, then put it in the box bellow, and press 'try' !</p>
+        <p>You will be notifie if the correct number is lower or higher than yours !</p>
+        <p>Good luck !!</p>
+      </div>
+      
+
+      <div class="start-container">
+       
+        <div class="annoncer">
+          <img id="gameImg" width="300px" height="450px" alt="Annoncer's image" src="./img/Character2.png">
+          <div class="status-annoncer" id="text-annoncer">Are you ready ?? 🤔</div>
+        </div>
+
+
+        <form id="form">
+            <label for="number">Guess the right number !</label>
+            <input name="Number" id="number" type="number" max="100" min="1" placeholder="Your number is: ">
+            <button id="submit">Play</button>
+        </form>
+        
+      </div>
+
+
+    </section>
+    
+    <footer>
+        <a href="https://github.com/hhertout"><i class="fa-brands fa-github"></i>Discover all my other project on GitHub</a></li>
+    </footer>
+
+  </body>
+</html>

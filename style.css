@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pacifico&display=swap');
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font-body : 'Indie Flower', cursive;
+    --font-title : 'Pacifico', cursive;
+
+    --primary-color : rgb(252, 200, 194);
+    --secondary-color : rgb(250, 238, 141);
+    --dark-color: #333;
+
+    --spacing : 1rem;
+    --spacing-more: 2rem;
+}
+
+.header{
+    background-color: var(--primary-color);
+    padding-block: var(--spacing-more);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rules{
+    position: relative;
+    top: var(--spacing-more);
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 50%;
+    
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    
+    padding: var(--spacing);
+}
+
+.img{
+    object-fit: contain;
+}
+
+.annoncer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-block: var(--spacing);
+    margin-block-start: 0;
+
+    font-family: var(--font-title);
+}
+
+.status-annoncer{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.game{
+    margin-block-end: 15vh;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: var(--spacing);
+}
+
+h1{
+    font-family: var(--font-title);
+    color: var(--dark-color);
+    text-align: center;
+}
+
+body{
+    width: 100vw;
+    font-family: var(--font-body);
+    font-size: 1.3rem;
+    background: rgb(255,172,70);
+    background: linear-gradient(90deg, rgba(255,172,70,1) 0%, rgba(255,210,102,1) 37%, rgba(185,247,148,1) 68%, rgba(67,223,255,1) 100%);
+}
+
+input{
+    margin-block: var(--spacing);
+    padding: 10px;
+    width: 20%;
+    border: none;
+    border-radius: 12px;
+    
+    font-size: 1rem;
+    text-align: center;
+}
+
+input:focus{
+    outline-color: var(--primary-color);
+}
+
+button{
+    padding-block: var(--spacing);
+    padding-inline: var(--spacing-more);
+    
+    background-color: var(--primary-color);
+    transition: background-color 200ms;
+    border-radius: 10px;
+    border: 1px solid salmon;
+}
+
+button:hover{
+    transform: scale(1.05);
+    background-color: var(--secondary-color);
+    transition: background-color scale 200ms;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    background-color: var(--primary-color);
+    padding: var(--spacing);
+    text-align: center;
+}
+
+@media screen and (max-width : 600px) {
+    #gameImg{
+        display: none;
+    }
+    .rules{
+        width: 90%;
+        margin-block-end: 10%;
+    }
+    .status-annoncer{
+        margin-block-start: 10%;
+    }
+}
+@media screen and (min-width: 600px) and (max-width : 900px){
+    .rules{
+        width: 80%;
+    }
+}
